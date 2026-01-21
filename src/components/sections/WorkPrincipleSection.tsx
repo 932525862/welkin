@@ -10,12 +10,12 @@ const WorkPrincipleSection = () => {
   const { t } = useLanguage();
 
   const steps = [
-    { icon: airIntakeIcon, titleKey: "work.step1", descKey: "work.step1.desc" },
-    { icon: preFilterIcon, titleKey: "work.step2", descKey: "work.step2.desc" },
-    { icon: carbonFilterIcon, titleKey: "work.step3", descKey: "work.step3.desc" },
-    { icon: hepaFilterIcon, titleKey: "work.step4", descKey: "work.step4.desc" },
-    { icon: uvLightIcon, titleKey: "work.step5", descKey: "work.step5.desc" },
-    { icon: cleanAirIcon, titleKey: "work.step6", descKey: "work.step6.desc" },
+    { titleKey: "work.step1", descKey: "work.step1.desc" },
+    {  titleKey: "work.step2", descKey: "work.step2.desc" },
+    { titleKey: "work.step3", descKey: "work.step3.desc" },
+    {  titleKey: "work.step4", descKey: "work.step4.desc" },
+    {  titleKey: "work.step5", descKey: "work.step5.desc" },
+    { titleKey: "work.step6", descKey: "work.step6.desc" },
   ];
 
   return (
@@ -32,9 +32,9 @@ const WorkPrincipleSection = () => {
         <div className="grid md:grid-cols-3 gap-4">
           {steps.map((step, index) => (
             <div key={index} className="bg-card rounded-2xl p-6 border border-border hover:border-primary/30 transition-colors">
-              <div className="w-14 h-14 rounded-xl overflow-hidden bg-welkin-dark mb-4">
-                <img src={step.icon} alt={t(step.titleKey)} className="w-full h-full object-cover" />
-              </div>
+              {/* <div className="w-14 h-14 rounded-xl overflow-hidden bg-welkin-dark mb-4">
+                <img  alt={t(step.titleKey)} className="w-full h-full object-cover" />
+              </div> */}
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-primary font-bold text-sm">{index + 1}</span>
                 <h3 className="text-lg font-bold text-primary">{t(step.titleKey)}</h3>
