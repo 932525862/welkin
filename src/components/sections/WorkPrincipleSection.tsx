@@ -36,7 +36,7 @@ const WorkPrincipleSection = () => {
                 <img  alt={t(step.titleKey)} className="w-full h-full object-cover" />
               </div> */}
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-primary font-bold text-sm">{index + 1}</span>
+                
                 <h3 className="text-lg font-bold text-primary">{t(step.titleKey)}</h3>
               </div>
               <p className="text-foreground text-sm">{t(step.descKey)}</p>
