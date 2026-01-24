@@ -13,6 +13,7 @@ import WorkPrincipleSection from "@/components/sections/WorkPrincipleSection";
 import ControlPanelASection from "@/components/sections/ControlPanelASection";
 import ControlPanelESection from "@/components/sections/ControlPanelESection";
 import ESGSection from "@/components/sections/ESGSection";
+import ContactFormSection from "@/components/sections/ContactFormSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
@@ -43,6 +44,7 @@ const Index = () => {
       <ControlPanelASection />
       <ControlPanelESection />
       <ESGSection />
+      <ContactFormSection />
       
       {/* Footer */}
       <footer id="contact" className="bg-background py-12 border-t border-border">
@@ -51,11 +53,9 @@ const Index = () => {
             <span className="text-primary-foreground font-bold text-xl">welkin.</span>
           </div>
           <p className="text-muted-foreground">
-            © 2024 Welkin. {t("footer.rights")}
+            © 2026 Welkin. {t("footer.rights")}
           </p>
-          <p className="text-primary mt-2">
-            @welkin_promotion_bot
-          </p>
+          
         </div>
       </footer>
     </div>

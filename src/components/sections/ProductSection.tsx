@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import welkinProductSingle from "@/assets/welkin-product-single.jpg";
+import welkinProductSingle from "@/assets/air.png";
 
 const ProductSection = () => {
   const { t } = useLanguage();
@@ -31,7 +31,7 @@ const ProductSection = () => {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <img src={welkinProductSingle} alt="Welkin Air Purifier" className="max-w-full h-auto max-h-[70vh] object-contain rounded-lg" />
+            <img src={welkinProductSingle} alt="Welkin Air Purifier" className="w-full h-auto max-h-[90vh] object-contain rounded-lg" />
           </div>
         </div>
       </div>

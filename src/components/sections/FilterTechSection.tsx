@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import filterLayers from "@/assets/filter-layers.jpg";
+import filterLayers from "@/assets/filter.png";
 
 const FilterTechSection = () => {
   const { t } = useLanguage();

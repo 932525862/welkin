@@ -165,6 +165,16 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat2": "30%",
     "esg.g.stat2.desc": "kompaniyalar samarali nazorat tartiblarisiz foydani yo'qotadi.",
     
+    // Contact Form
+    "contact.title": "Mahsulotga ariza qoldirish",
+    "contact.description": "Ushbu forma orqali biz bilan bog'lanib, mahsulot haqida ko'proq ma'lumot oling.",
+    "contact.form.name": "Ism va familiya",
+    "contact.form.phone": "Telefon raqami",
+    "contact.form.message": "Qisqacha izoh",
+    "contact.form.submit": "Jo'natish",
+    "contact.form.success": "Rahmat! Ariza qabul qilindi.",
+    "contact.form.error": "Xato! Iltimos qaytadan urinib ko'ring.",
+    
     // Footer
     "footer.rights": "Barcha huquqlar himoyalangan.",
     "footer.contact": "Bog'lanish",
@@ -325,6 +335,16 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat2": "30%",
     "esg.g.stat2.desc": "компаний теряют прибыль из-за отсутствия эффективных процедур контроля.",
     
+    // Contact Form
+    "contact.title": "Подать заявку на продукт",
+    "contact.description": "Свяжитесь с нами через эту форму и получите больше информации о продукте.",
+    "contact.form.name": "Имя и Фамилия",
+    "contact.form.phone": "Номер телефона",
+    "contact.form.message": "Краткое сообщение",
+    "contact.form.submit": "Отправить",
+    "contact.form.success": "Спасибо! Заявка принята.",
+    "contact.form.error": "Ошибка! Пожалуйста, попробуйте снова.",
+    
     // Footer
     "footer.rights": "Все права защищены.",
     "footer.contact": "Контакты",
@@ -484,6 +504,16 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat1.desc": "annual losses of global business due to corruption and weak governance.",
     "esg.g.stat2": "30%",
     "esg.g.stat2.desc": "of companies lose profits due to lack of effective control procedures.",
+    
+    // Contact Form
+    "contact.title": "Submit Your Application",
+    "contact.description": "Contact us through this form and get more information about the product.",
+    "contact.form.name": "Full Name",
+    "contact.form.phone": "Phone Number",
+    "contact.form.message": "Brief Message",
+    "contact.form.submit": "Send",
+    "contact.form.success": "Thank you! Your application has been received.",
+    "contact.form.error": "Error! Please try again.",
     
     // Footer
     "footer.rights": "All rights reserved.",

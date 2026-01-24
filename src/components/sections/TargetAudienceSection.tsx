@@ -1,9 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import familyKidsIcon from "@/assets/icons/family-kids.png";
-import allergyPersonIcon from "@/assets/icons/allergy-person.png";
-import petsIcon from "@/assets/icons/pets.png";
-import cityRoadIcon from "@/assets/icons/city-road.png";
-import officeIcon from "@/assets/icons/office.png";
+import familyKidsIcon from "@/assets/1b.jpg";
+import allergyPersonIcon from "@/assets/2b.jpg";
+import petsIcon from "@/assets/3b.jpg";
+import cityRoadIcon from "@/assets/4b.jpg";
+import officeIcon from "@/assets/5b.jpg"
+
 
 const TargetAudienceSection = () => {
   const { t } = useLanguage();
@@ -29,15 +30,24 @@ const TargetAudienceSection = () => {
           {t("audience.title")}
         </h2>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {audiences.map((audience, index) => (
-            <div key={index} className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all group">
-              <div className="h-40 overflow-hidden bg-welkin-dark">
-                <img src={audience.icon} alt={t(audience.titleKey)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-primary mb-3">{t(audience.titleKey)}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t(audience.descKey)}</p>
+            <div 
+              key={index} 
+              className="relative rounded-3xl overflow-hidden border border-border/30 hover:border-primary/50 transition-all group h-96 cursor-pointer"
+              style={{
+                backgroundImage: `url(${audience.icon})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {/* Dark overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background/95 group-hover:from-black/20 group-hover:via-background/80 group-hover:to-black/90 transition-all duration-300" />
+              
+              {/* Content */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 className="text-2xl font-bold text-primary mb-2">{t(audience.titleKey)}</h3>
+                <p className="text-base text-muted-foreground leading-relaxed line-clamp-6">{t(audience.descKey)}</p>
               </div>
             </div>
           ))}

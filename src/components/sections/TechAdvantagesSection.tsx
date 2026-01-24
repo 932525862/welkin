@@ -1,9 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import welkinProducts from "@/assets/welkin-products.jpg";
-import highPerformanceIcon from "@/assets/icons/high-performance.png";
-import multiFilterIcon from "@/assets/icons/multi-filter.png";
-import quietModeIcon from "@/assets/icons/quiet-mode.png";
-import smartSensorIcon from "@/assets/icons/smart-sensor.png";
+import welkinProducts from "@/assets/nexwelk.png"
+import highPerformanceIcon from "@/assets/1x.png";
+import multiFilterIcon from "@/assets/2x.png";
+import quietModeIcon from "@/assets/3x.png";
+import smartSensorIcon from "@/assets/4x.png";
 
 const TechAdvantagesSection = () => {
   const { t } = useLanguage();
@@ -26,24 +26,53 @@ const TechAdvantagesSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary italic mb-12">{t("tech.title")}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary italic mb-12">
+              {t("tech.title")}
+            </h2>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {advantages.map((adv, index) => (
-                <div key={index} className="bg-card rounded-2xl p-6 border border-border">
-                  <div className="w-14 h-14 rounded-xl overflow-hidden bg-welkin-dark mb-4">
-                    <img src={adv.icon} alt={t(adv.titleKey)} className="w-full h-full object-cover" />
+                <div
+                  key={index}
+                  className="bg-card rounded-2xl p-6 border border-border"
+                >
+                  {/* ICON – BIR XIL HAJIM */}
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 
+                                  flex items-center justify-center mb-4">
+                    <img
+                      src={adv.icon}
+                      alt={t(adv.titleKey)}
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{t(adv.titleKey)}</h3>
-                  <p className="text-foreground text-sm">{t(adv.descKey)}</p>
+
+                  <h3 className="text-lg font-bold text-primary mb-2">
+                    {t(adv.titleKey)}
+                  </h3>
+                  <p className="text-foreground text-sm">
+                    {t(adv.descKey)}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
-            <img src={welkinProducts} alt="Welkin Technology" className="max-w-full h-auto max-h-[60vh] object-contain rounded-lg" />
-          </div>
+          <div className="relative flex justify-end items-center h-full">
+  <img
+    src={welkinProducts}
+    alt="Welkin Technology"
+    className="
+      w-[300px]
+      md:w-[400px]
+      lg:w-[500px]
+      h-auto
+      object-contain
+      translate-x-4
+      drop-shadow-[0_0_40px_rgba(0,255,255,0.18)]
+    "
+  />
+</div>
+
         </div>
       </div>
     </section>

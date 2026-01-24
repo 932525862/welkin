@@ -5,6 +5,7 @@ import allergyIcon from "@/assets/icons/allergy.png";
 import lungDamageIcon from "@/assets/icons/lung-damage.png";
 import coughingIcon from "@/assets/icons/coughing.png";
 import weaknessIcon from "@/assets/icons/weakness.png";
+import Imge from "../../assets/masal.png"
 
 const HealthEffectsSection = () => {
   const { t } = useLanguage();
@@ -44,18 +45,8 @@ const HealthEffectsSection = () => {
           </div>
 
           <div className="lg:w-1/3 flex justify-center">
-            <div className="w-48 h-80 relative">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-b from-muted/60 to-muted/40 rounded-full border-2 border-muted/30"></div>
-              <div className="absolute top-14 left-1/2 -translate-x-1/2 w-6 h-6 bg-muted/40"></div>
-              <div className="absolute top-20 left-1/2 -translate-x-1/2 w-28 h-36 bg-gradient-to-b from-muted/50 to-muted/30 rounded-t-3xl rounded-b-xl border-2 border-muted/30">
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-16 flex gap-2 justify-center">
-                  <div className="w-8 h-14 bg-destructive/30 rounded-full border border-destructive/50 animate-pulse"></div>
-                  <div className="w-8 h-14 bg-destructive/30 rounded-full border border-destructive/50 animate-pulse"></div>
-                </div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <span className="text-destructive text-4xl font-bold">+</span>
-                </div>
-              </div>
+            <div className="w-65 h-85 relative">
+              <img src={Imge} alt="" />
             </div>
           </div>
 

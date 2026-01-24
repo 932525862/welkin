@@ -1,10 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import constructionIcon from "@/assets/icons/construction-materials.png";
-import chemicalsIcon from "@/assets/icons/household-chemicals.png";
-import gasIcon from "@/assets/icons/gas-emissions.png";
-import smogIcon from "@/assets/icons/smog-exhaust.png";
-import moldIcon from "@/assets/icons/mold-bacteria.png";
-import dustMitesIcon from "@/assets/icons/dust-mites.png";
+import constructionIcon from "@/assets/1c.png"
+import chemicalsIcon from "@/assets/2c.png"
+import gasIcon from "@/assets/6c.png"
+import smogIcon from "@/assets/3c.png"
+import moldIcon from "@/assets/icons/4c.png"
+import dustMitesIcon from "@/assets/icons/5c.png"
 
 const ProblemSection = () => {
   const { t } = useLanguage();
