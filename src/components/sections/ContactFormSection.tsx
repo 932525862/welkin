@@ -43,94 +43,125 @@ const ContactFormSection = () => {
   return (
     <section className="bg-background py-20">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mx-auto">
-          {/* Header */}
-          <div className="mb-12 text-center">
-            <div className="inline-block bg-primary px-4 py-2 rounded-lg mb-6">
-              <span className="text-primary-foreground font-bold text-xl">welkin.</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-              {t("contact.title")}
-            </h2>
-            
-            <p className="text-lg text-muted-foreground">
-              {t("contact.description")}
-            </p>
+        <div className="mb-12 text-center">
+          <div className="inline-block bg-primary px-4 py-2 rounded-lg mb-6">
+            <span className="text-primary-foreground font-bold text-xl">welkin.</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            {t("contact.title")}
+          </h2>
+          
+          <p className="text-lg text-muted-foreground">
+            {t("contact.description")}
+          </p>
+        </div>
+
+        {/* Form and Map Container */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left side - Form */}
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Input */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  {t("contact.form.name")}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder={t("contact.form.name")}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                />
+              </div>
+
+              {/* Phone Input */}
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  {t("contact.form.phone")}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder={t("contact.form.phone")}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                />
+              </div>
+
+              {/* Message Input */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  {t("contact.form.message")}
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder={t("contact.form.message")}
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+              >
+                {isSubmitting ? t("contact.form.submit") + "..." : t("contact.form.submit")}
+              </button>
+
+              {/* Message */}
+              {message && (
+                <div
+                  className={`p-4 rounded-lg text-center font-medium ${
+                    message.includes(t("contact.form.success"))
+                      ? "bg-green-900/30 border border-green-700/50 text-green-400"
+                      : "bg-red-900/30 border border-red-700/50 text-red-400"
+                  }`}
+                >
+                  {message}
+                </div>
+              )}
+            </form>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name Input */}
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                {t("contact.form.name")}
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder={t("contact.form.name")}
-                className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
-              />
+          {/* Right side - Map and Contact Info */}
+          <div className="space-y-6">
+            {/* Map */}
+            <div className="rounded-2xl overflow-hidden border border-border h-96 shadow-lg">
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?ll=69.274343%2C41.293540&mode=search&sll=69.250139%2C41.267111&text=41.267111%2C69.250139&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=13.48"
+                width="100%"
+                height="100%"
+                style={{ border: "none", borderRadius: "1rem" }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              ></iframe>
             </div>
 
-            {/* Phone Input */}
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                {t("contact.form.phone")}
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder={t("contact.form.phone")}
-                className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
-              />
-            </div>
-
-            {/* Message Input */}
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                {t("contact.form.message")}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder={t("contact.form.message")}
-                rows={5}
-                className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors duration-200"
-            >
-              {isSubmitting ? t("contact.form.submit") + "..." : t("contact.form.submit")}
-            </button>
-
-            {/* Message */}
-            {message && (
-              <div
-                className={`p-4 rounded-lg text-center font-medium ${
-                  message.includes(t("contact.form.success"))
-                    ? "bg-green-900/30 border border-green-700/50 text-green-400"
-                    : "bg-red-900/30 border border-red-700/50 text-red-400"
-                }`}
+            {/* Phone Numbers Card */}
+              
+              <a
+                href="tel:+998712000646"
+                className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
               >
-                {message}
-              </div>
-            )}
-          </form>
+                <span className="text-foreground font-medium">{t("contact.label")}:</span>
+                <span className="text-primary font-bold text-lg">+998 71 200 06 46</span>
+              </a>
+              
+              
+            
+          </div>
         </div>
       </div>
     </section>

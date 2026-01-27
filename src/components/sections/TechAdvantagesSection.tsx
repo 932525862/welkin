@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import welkinProducts from "@/assets/nexwelk.png"
+import welkinProducts from "@/assets/K08E.png"
 import highPerformanceIcon from "@/assets/1x.png";
 import multiFilterIcon from "@/assets/2x.png";
 import quietModeIcon from "@/assets/3x.png";
@@ -55,12 +55,24 @@ const TechAdvantagesSection = () => {
                 </div>
               ))}
             </div>
+
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              {t("hero.order")}
+            </button>
           </div>
 
           <div className="relative flex justify-end items-center h-full">
   <img
     src={welkinProducts}
-    alt="Welkin Technology"
+    alt="Welkin K-08E Air Purifiers"
     className="
       w-[300px]
       md:w-[400px]

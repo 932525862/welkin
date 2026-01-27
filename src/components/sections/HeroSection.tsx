@@ -1,6 +1,6 @@
 import welkinProducts from "@/assets/welkin-products.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Welkin from "../../assets/welkin (Edited).png";
+import Welkin from "../../assets/home .png";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -10,9 +10,9 @@ const HeroSection = () => {
       
       {/* Large background text (moved up) */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
-        <h1 className="text-[20vw] font-bold text-foreground/5 tracking-tight whitespace-nowrap">
+        <h2 className="text-[20vw] font-bold text-foreground/5 tracking-tight whitespace-nowrap">
           welkin<span className="text-primary/20">.</span>
-        </h1>
+        </h2>
       </div>
 
       {/* Content */}
@@ -30,9 +30,20 @@ const HeroSection = () => {
               {t("hero.subtitle")}
             </p>
             <div className="pt-8">
-              <p className="text-lg text-foreground">
+              <p className="text-lg text-foreground mb-6">
                 {t("hero.description")}
               </p>
+              <button
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+              >
+                {t("hero.order")}
+              </button>
             </div>
           </div>
 

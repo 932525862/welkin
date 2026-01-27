@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import welkinProductSingle from "@/assets/air.png";
+import welkinProductSingle from "@/assets/ochistitel.png";
 
 const ProductSection = () => {
   const { t } = useLanguage();

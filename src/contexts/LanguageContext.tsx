@@ -22,6 +22,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.title2": "tozalagichlar",
     "hero.subtitle": "Toza havo shu yerdan boshlanadi.",
     "hero.description": "Welkin — uy va ofis uchun toza havo aqlli ekotizimi.",
+    "hero.order": "Buyurtma berish",
     
     // Air Pollution
     "airpollution.title": "Shahar havosi muammoga aylandi",
@@ -174,6 +175,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.submit": "Jo'natish",
     "contact.form.success": "Rahmat! Ariza qabul qilindi.",
     "contact.form.error": "Xato! Iltimos qaytadan urinib ko'ring.",
+    "contact.label": "Bog'lanish uchun",
     
     // Footer
     "footer.rights": "Barcha huquqlar himoyalangan.",
@@ -192,6 +194,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.title2": "воздуха",
     "hero.subtitle": "Чистота воздуха начинается здесь.",
     "hero.description": "Welkin — умная экосистема чистого воздуха для дома и офиса.",
+    "hero.order": "Заказать",
     
     // Air Pollution
     "airpollution.title": "Городской воздух стал проблемой",
@@ -344,6 +347,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.submit": "Отправить",
     "contact.form.success": "Спасибо! Заявка принята.",
     "contact.form.error": "Ошибка! Пожалуйста, попробуйте снова.",
+    "contact.label": "Для связи",
     
     // Footer
     "footer.rights": "Все права защищены.",
@@ -362,6 +366,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.title2": "Purifiers",
     "hero.subtitle": "Clean air starts here.",
     "hero.description": "Welkin — smart clean air ecosystem for home and office.",
+    "hero.order": "Place Order",
     
     // Air Pollution
     "airpollution.title": "Urban air has become a problem",
@@ -514,6 +519,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.submit": "Send",
     "contact.form.success": "Thank you! Your application has been received.",
     "contact.form.error": "Error! Please try again.",
+    "contact.label": "For contact",
     
     // Footer
     "footer.rights": "All rights reserved.",

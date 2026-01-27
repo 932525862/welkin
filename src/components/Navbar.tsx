@@ -89,6 +89,15 @@ const Navbar = () => {
 
           {/* Language Selector & Mobile Menu Button */}
           <div className="flex items-center space-x-2 sm:space-x-4">
+            {/* Phone Number */}
+            <a
+              href="tel:+998712000646"
+              className="hidden sm:flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 text-sm font-medium text-primary hover:text-primary/90 hover:bg-primary/10 rounded-lg transition-all duration-200"
+            >
+              <span className="hidden md:inline">Tel:</span>
+              <span className="font-bold">+998 71 200 06 46</span>
+            </a>
+
             {/* Language Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50">
@@ -148,6 +157,14 @@ const Navbar = () => {
                 {t(item.key)}
               </a>
             ))}
+            
+            {/* Mobile Phone Number */}
+            <a
+              href="tel:+998712000646"
+              className="block px-4 py-3 text-base font-bold text-primary hover:text-primary/90 hover:bg-primary/10 rounded-lg transition-all duration-200"
+            >
+              Tel: +998 71 200 06 46
+            </a>
           </div>
         </div>
       </div>
