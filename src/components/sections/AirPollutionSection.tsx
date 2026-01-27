@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import Karta from "../../assets/karta.png"
+import Karta from "../../assets/tashkent.jpg"
 import niqob from "../../assets/bg.png"
 const AirPollutionSection = () => {
   const { t } = useLanguage();

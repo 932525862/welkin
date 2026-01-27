@@ -1,6 +1,6 @@
 import welkinProducts from "@/assets/welkin-products.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Welkin from "../../assets/home .png";
+import Welkin from "../../assets/homewelkin.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();

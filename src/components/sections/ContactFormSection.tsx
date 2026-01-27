@@ -138,29 +138,26 @@ const ContactFormSection = () => {
           <div className="space-y-6">
             {/* Map */}
             <div className="rounded-2xl overflow-hidden border border-border h-96 shadow-lg">
-              <iframe
-                src="https://yandex.uz/map-widget/v1/?ll=69.274343%2C41.293540&mode=search&sll=69.250139%2C41.267111&text=41.267111%2C69.250139&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=13.48"
-                width="100%"
-                height="100%"
-                style={{ border: "none", borderRadius: "1rem" }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              ></iframe>
-            </div>
+  <iframe
+    src="https://yandex.uz/map-widget/v1/?ll=69.250139,41.267111&z=16&pt=69.250139,41.267111,pm2rdm"
+    width="100%"
+    height="100%"
+    style={{ border: "none", borderRadius: "1rem" }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer"
+  ></iframe>
+</div>
+
 
             {/* Phone Numbers Card */}
-              
-              <a
-                href="tel:+998712000646"
-                className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
-              >
-                <span className="text-foreground font-medium">{t("contact.label")}:</span>
-                <span className="text-primary font-bold text-lg">+998 71 200 06 46</span>
-              </a>
-              
-              
-            
+            <a
+              href="tel:+998900546074"
+              className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
+            >
+              <span className="text-foreground font-medium">{t("contact.label")}:</span>
+              <span className="text-primary font-bold text-lg">+998 90 054 60 74</span>
+            </a>
           </div>
         </div>
       </div>
