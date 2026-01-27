@@ -1,6 +1,6 @@
 import welkinProducts from "@/assets/welkin-products.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Welkin from "../../assets/homewelkin.png";
+import Welkin from "../../assets/K08E4.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <img
                 src={Welkin}
                 alt="Welkin Air Purifiers"
-                className="relative w-full h-auto max-h-[150vh] object-contain rounded-lg scale-110"
+                className="relative w-full h-auto max-h-[70vh] object-contain rounded-lg scale-60"
               />
             </div>
           </div>
