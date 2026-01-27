@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
+import { toast } from "@/components/ui/use-toast";
 
 const ContactFormSection = () => {
   const { t } = useLanguage();
@@ -28,16 +29,38 @@ const ContactFormSection = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
+
+    // Telegram bot credentials (from user request)
+    const TELEGRAM_TOKEN = "8092123767:AAEXqPGwb7ZZfzzLszfwwP5Fof94NHNN-hI";
+    const TELEGRAM_CHAT_ID = "-1003708129916";
+
+    try {
+      const text = `Новый клиент с сайта\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nСообщение: ${formData.message || '-'}`;
+
+      const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: "HTML" }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Telegram API error");
+      }
+
+      // show multilingual toast on success
+      toast({ title: t("contact.toast.success") });
+
+      // also keep inline message for accessibility/backup
       setMessage(t("contact.form.success"));
       setFormData({ name: "", phone: "", message: "" });
+    } catch (err) {
+      setMessage(t("contact.form.error"));
+      toast({ title: t("contact.form.error"), variant: "destructive" as any });
+    } finally {
       setIsSubmitting(false);
-      
-      // Clear message after 3 seconds
+      // Clear inline message after 3 seconds
       setTimeout(() => setMessage(""), 3000);
-    }, 1000);
+    }
   };
 
   return (

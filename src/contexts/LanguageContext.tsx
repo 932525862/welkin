@@ -119,7 +119,7 @@ const translations: Record<Language, Record<string, string>> = {
     "filter.hepa.note": "almashtirish muddati: 6-12 oyda bir marta",
     "filter.carbon": "Ko'mir filtri",
     "filter.carbon.desc": "yoqimsiz hidlarni, zararli gazlarni va uchuvchan organik birikmalarni samarali yutadi.",
-    "filter.carbon.note": "almashtirish muddati: 6 oyda bir marta",
+    "filter.carbon.note": "almashtirish muddati: 12 oyda bir marta",
     "filter.ionizer": "Havo ionizatsiyasi",
     "filter.ionizer.desc": "muhitni salbiy ionlar bilan to'yintiradi, ular chang, allergenlar va yoqimsiz hidlarni zararsizlashtirishga yordam beradi.",
     
@@ -174,6 +174,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.message": "Qisqacha izoh",
     "contact.form.submit": "Jo'natish",
     "contact.form.success": "Rahmat! Ariza qabul qilindi.",
+    "contact.toast.success": "Ariza yuborildi — tez orada siz bilan bog'lanamiz.",
     "contact.form.error": "Xato! Iltimos qaytadan urinib ko'ring.",
     "contact.label": "Bog'lanish uchun",
     
@@ -291,7 +292,7 @@ const translations: Record<Language, Record<string, string>> = {
     "filter.hepa.note": "сроки замены: один раз в 6–12 месяцев",
     "filter.carbon": "Угольный фильтр",
     "filter.carbon.desc": "эффективно поглощает неприятные запахи, вредные газы и летучие органические соединения.",
-    "filter.carbon.note": "сроки замены: один раз в 6 месяцев",
+    "filter.carbon.note": "сроки замены: один раз в 12 месяцев",
     "filter.ionizer": "Ионизация воздуха",
     "filter.ionizer.desc": "насыщает пространство отрицательными ионами, которые помогают нейтрализовать пыль, аллергены и неприятные запахи.",
     
@@ -346,6 +347,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.message": "Краткое сообщение",
     "contact.form.submit": "Отправить",
     "contact.form.success": "Спасибо! Заявка принята.",
+    "contact.toast.success": "Заявка отправлена — скоро с вами свяжемся.",
     "contact.form.error": "Ошибка! Пожалуйста, попробуйте снова.",
     "contact.label": "Для связи",
     
@@ -463,7 +465,7 @@ const translations: Record<Language, Record<string, string>> = {
     "filter.hepa.note": "replacement: once every 6-12 months",
     "filter.carbon": "Carbon Filter",
     "filter.carbon.desc": "effectively absorbs unpleasant odors, harmful gases and volatile organic compounds.",
-    "filter.carbon.note": "replacement: once every 6 months",
+    "filter.carbon.note": "replacement: once every 12 months",
     "filter.ionizer": "Air Ionization",
     "filter.ionizer.desc": "saturates the space with negative ions that help neutralize dust, allergens and unpleasant odors.",
     
@@ -518,6 +520,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.message": "Brief Message",
     "contact.form.submit": "Send",
     "contact.form.success": "Thank you! Your application has been received.",
+    "contact.toast.success": "Application sent — we'll contact you shortly.",
     "contact.form.error": "Error! Please try again.",
     "contact.label": "For contact",
     
