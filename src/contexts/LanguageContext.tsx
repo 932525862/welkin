@@ -167,7 +167,7 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat2.desc": "kompaniyalar samarali nazorat tartiblarisiz foydani yo'qotadi.",
     
     // Contact Form
-    "contact.title": "Mahsulotga ariza qoldirish",
+    "contact.title": "Ariza qoldirish",
     "contact.description": "Ushbu forma orqali biz bilan bog'lanib, mahsulot haqida ko'proq ma'lumot oling.",
     "contact.form.name": "Ism va familiya",
     "contact.form.phone": "Telefon raqami",
@@ -340,7 +340,7 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat2.desc": "компаний теряют прибыль из-за отсутствия эффективных процедур контроля.",
     
     // Contact Form
-    "contact.title": "Подать заявку на продукт",
+    "contact.title": "Оставить заявку",
     "contact.description": "Свяжитесь с нами через эту форму и получите больше информации о продукте.",
     "contact.form.name": "Имя и Фамилия",
     "contact.form.phone": "Номер телефона",
@@ -513,7 +513,7 @@ const translations: Record<Language, Record<string, string>> = {
     "esg.g.stat2.desc": "of companies lose profits due to lack of effective control procedures.",
     
     // Contact Form
-    "contact.title": "Submit Your Application",
+    "contact.title": "Leave an Application",
     "contact.description": "Contact us through this form and get more information about the product.",
     "contact.form.name": "Full Name",
     "contact.form.phone": "Phone Number",

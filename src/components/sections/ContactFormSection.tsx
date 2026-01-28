@@ -175,11 +175,11 @@ const ContactFormSection = () => {
 
             {/* Phone Numbers Card */}
             <a
-              href="tel:+998900546074"
+              href="tel:+998337758800"
               className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
             >
               <span className="text-foreground font-medium">{t("contact.label")}:</span>
-              <span className="text-primary font-bold text-lg">+998 90 054 60 74</span>
+              <span className="text-primary font-bold text-lg">+998 33 775 88 00</span>
             </a>
           </div>
         </div>
