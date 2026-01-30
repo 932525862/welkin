@@ -34,7 +34,7 @@ const TargetAudienceSection = () => {
           {audiences.map((audience, index) => (
             <div 
               key={index} 
-              className="relative rounded-3xl overflow-hidden border border-border/30 hover:border-primary/50 transition-all group h-96 cursor-pointer"
+              className="relative rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300 group h-96 cursor-pointer"
               style={{
                 backgroundImage: `url(${audience.icon})`,
                 backgroundSize: 'cover',

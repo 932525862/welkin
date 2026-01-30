@@ -7,12 +7,13 @@ const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -22,7 +23,7 @@ const ContactFormSection = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!formData.name.trim() || !formData.phone.trim()) {
       setMessage(t("contact.form.error"));
       return;
@@ -35,13 +36,20 @@ const ContactFormSection = () => {
     const TELEGRAM_CHAT_ID = "-1003708129916";
 
     try {
-      const text = `Новый клиент с сайта\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nСообщение: ${formData.message || '-'}`;
+      const text = `Новый клиент с сайта\nИмя: ${formData.name}\nТелефон: ${formData.phone}`;
 
-      const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: "HTML" }),
-      });
+      const res = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text,
+            parse_mode: "HTML",
+          }),
+        },
+      );
 
       if (!res.ok) {
         throw new Error("Telegram API error");
@@ -52,7 +60,7 @@ const ContactFormSection = () => {
 
       // also keep inline message for accessibility/backup
       setMessage(t("contact.form.success"));
-      setFormData({ name: "", phone: "", message: "" });
+      setFormData({ name: "", phone: "" });
     } catch (err) {
       setMessage(t("contact.form.error"));
       toast({ title: t("contact.form.error"), variant: "destructive" as any });
@@ -68,13 +76,15 @@ const ContactFormSection = () => {
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
           <div className="inline-block bg-primary px-4 py-2 rounded-lg mb-6">
-            <span className="text-primary-foreground font-bold text-xl">welkin.</span>
+            <span className="text-primary-foreground font-bold text-xl">
+              welkin.
+            </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             {t("contact.title")}
           </h2>
-          
+
           <p className="text-lg text-muted-foreground">
             {t("contact.description")}
           </p>
@@ -87,7 +97,10 @@ const ContactFormSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   {t("contact.form.name")}
                 </label>
                 <input
@@ -103,7 +116,10 @@ const ContactFormSection = () => {
 
               {/* Phone Input */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   {t("contact.form.phone")}
                 </label>
                 <input
@@ -117,21 +133,7 @@ const ContactFormSection = () => {
                 />
               </div>
 
-              {/* Message Input */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  {t("contact.form.message")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder={t("contact.form.message")}
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
-                />
-              </div>
+              {/* Phone card moved here */}
 
               {/* Submit Button */}
               <button
@@ -139,8 +141,29 @@ const ContactFormSection = () => {
                 disabled={isSubmitting}
                 className="w-full bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                {isSubmitting ? t("contact.form.submit") + "..." : t("contact.form.submit")}
+                {isSubmitting
+                  ? t("contact.form.submit") + "..."
+                  : t("contact.form.submit")}
               </button>
+
+              <a
+                href="tel:+998337758800"
+                className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
+              >
+                <span className="text-foreground font-medium">
+                  {t("contact.label")}:
+                </span>
+                <span className="text-primary font-bold text-lg">
+                  +998 33 775 88 00
+                </span>
+              </a>
+              {/* <a
+              href="tel:+998337758800"
+              className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
+            >
+              <span className="text-foreground font-medium">{t("contact.label")}:</span>
+              <span className="text-primary font-bold text-lg">+998 33 775 88 00</span>
+            </a> */}
 
               {/* Message */}
               {message && (
@@ -160,27 +183,26 @@ const ContactFormSection = () => {
           {/* Right side - Map and Contact Info */}
           <div className="space-y-6">
             {/* Map */}
-            <div className="rounded-2xl overflow-hidden border border-border h-96 shadow-lg">
-  <iframe
-    src="https://yandex.uz/map-widget/v1/?ll=69.250139,41.267111&z=16&pt=69.250139,41.267111,pm2rdm"
-    width="100%"
-    height="100%"
-    style={{ border: "none", borderRadius: "1rem" }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer"
-  ></iframe>
-</div>
-
+            <div className="rounded-2xl overflow-hidden border border-border  h-80 shadow-lg">
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?ll=69.250139,41.267111&z=16&pt=69.250139,41.267111,pm2rdm"
+                width="100%"
+                height="100%"
+                style={{ border: "none", borderRadius: "1rem" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              ></iframe>
+            </div>
 
             {/* Phone Numbers Card */}
-            <a
+            {/* <a
               href="tel:+998337758800"
               className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
             >
               <span className="text-foreground font-medium">{t("contact.label")}:</span>
               <span className="text-primary font-bold text-lg">+998 33 775 88 00</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

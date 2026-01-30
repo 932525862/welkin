@@ -12,7 +12,7 @@ const translations: Record<Language, Record<string, string>> = {
   uz: {
     // Navbar
     "nav.home": "Bosh sahifa",
-    "nav.problem": "Muammo",
+    "nav.problem": "Havo sifati",
     "nav.products": "Mahsulotlar",
     "nav.technology": "Texnologiya",
     "nav.contact": "Bog'lanish",
@@ -83,6 +83,11 @@ const translations: Record<Language, Record<string, string>> = {
     "promo.dates": "10 yanvardan 28 fevralga qadar",
     "promo.participate": "havo tozalagich sotib olganingizda 2 kishilik Dubayga sayohat qur'asida qatnashuvchi bo'lasiz!",
     "promo.register": "Aksiyada qatnashish uchun Telegram botimizda ro'yxatdan o'ting",
+    "promo.inquiry.title": "Savolaringiz bo'lsa malumotlaringizni yozib qoldiring",
+    "promo.inquiry.subtitle": "Siz bilan bog'lanamiz",
+    "promo.inquiry.form.name": "Ism va familiya",
+    "promo.inquiry.form.phone": "Telefon raqami",
+    "promo.inquiry.form.submit": "Jo'natish",
     
     // Stats
     "stats.users": "15000+ foydalanuvchi",
@@ -185,7 +190,7 @@ const translations: Record<Language, Record<string, string>> = {
   ru: {
     // Navbar
     "nav.home": "Главная",
-    "nav.problem": "Проблема",
+    "nav.problem": "Качество воздуха",
     "nav.products": "Продукты",
     "nav.technology": "Технология",
     "nav.contact": "Контакты",
@@ -256,6 +261,11 @@ const translations: Record<Language, Record<string, string>> = {
     "promo.dates": "с 10 января по 28 февраля",
     "promo.participate": "вы становитесь участником розыгрыша поездки в Дубай на 2-их!",
     "promo.register": "Для участия в акции регистрируйтесь в нашем Telegram боте",
+    "promo.inquiry.title": "У вас есть вопросы? Оставьте свою информацию",
+    "promo.inquiry.subtitle": "Мы свяжемся с вами",
+    "promo.inquiry.form.name": "Имя и Фамилия",
+    "promo.inquiry.form.phone": "Номер телефона",
+    "promo.inquiry.form.submit": "Отправить",
     
     // Stats
     "stats.users": "15000+ пользователей",
@@ -358,7 +368,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navbar
     "nav.home": "Home",
-    "nav.problem": "Problem",
+    "nav.problem": "Air Quality",
     "nav.products": "Products",
     "nav.technology": "Technology",
     "nav.contact": "Contact",
@@ -429,6 +439,11 @@ const translations: Record<Language, Record<string, string>> = {
     "promo.dates": "from January 10 to February 28",
     "promo.participate": "you become a participant in the Dubai trip giveaway for 2!",
     "promo.register": "To participate in the promotion, register in our Telegram bot",
+    "promo.inquiry.title": "Have questions? Leave your information",
+    "promo.inquiry.subtitle": "We'll contact you",
+    "promo.inquiry.form.name": "Full Name",
+    "promo.inquiry.form.phone": "Phone Number",
+    "promo.inquiry.form.submit": "Send",
     
     // Stats
     "stats.users": "15000+ users",

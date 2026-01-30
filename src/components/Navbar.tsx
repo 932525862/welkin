@@ -54,7 +54,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-20">
           {/* Logo */}
           <a
             href="#hero"
@@ -62,12 +62,14 @@ const Navbar = () => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
-            className="flex items-center space-x-1 group"
+            className="flex items-center space-x-2 group"
           >
-            <span className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-              welkin
-            </span>
-            <span className="text-xl sm:text-2xl font-bold text-primary">.</span>
+            <div className="inline-block bg-primary px-3 py-2 rounded-lg">
+              <span className="text-primary-foreground font-bold text-xl sm:text-2xl">
+                welkin
+              </span>
+              <span className="text-primary-foreground font-bold text-xl sm:text-2xl">.</span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
@@ -160,10 +162,10 @@ const Navbar = () => {
             
             {/* Mobile Phone Number */}
             <a
-              href="tel:+998712000646"
+              href="tel:+998337758800"
               className="block px-4 py-3 text-base font-bold text-primary hover:text-primary/90 hover:bg-primary/10 rounded-lg transition-all duration-200"
             >
-              Tel: +998 71 200 06 46
+              Tel: +998 33 775 88 00
             </a>
           </div>
         </div>

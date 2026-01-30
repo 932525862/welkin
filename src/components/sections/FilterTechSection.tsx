@@ -38,7 +38,7 @@ const FilterTechSection = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <img src={filterLayers} alt="Filter Technology - 6 Stages" className="max-w-full h-auto rounded-lg" />
+            <img src={filterLayers} alt="welkin welkin-air.uz " className="max-w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
