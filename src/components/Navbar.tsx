@@ -8,10 +8,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const languages: { code: Language; name: string; }[] = [
-  { code: "uz", name: "O'zbek",  },
-  { code: "ru", name: "Русский",  },
-  { code: "en", name: "English",},
+const languages: { code: Language; name: string }[] = [
+  { code: "uz", name: "O'zbek" },
+  { code: "ru", name: "Русский" },
+  { code: "en", name: "English" },
 ];
 
 const Navbar = () => {
@@ -35,12 +35,21 @@ const Navbar = () => {
     { key: "nav.contact", href: "#contact" },
   ];
 
+  // 🔹 O'zgartirilgan scroll funksiyasi offset bilan
   const scrollToSection = (href: string) => {
     setIsOpen(false);
+
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (!element) return;
+
+    const navbarHeight = document.querySelector("nav")?.offsetHeight || 80;
+    const yOffset = -navbarHeight; // navbar balandligi hisobga olinadi
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
   };
 
   const currentLang = languages.find((l) => l.code === language);
@@ -68,7 +77,9 @@ const Navbar = () => {
               <span className="text-primary-foreground font-bold text-xl sm:text-2xl">
                 welkin
               </span>
-              <span className="text-primary-foreground font-bold text-xl sm:text-2xl">.</span>
+              <span className="text-primary-foreground font-bold text-xl sm:text-2xl">
+                .
+              </span>
             </div>
           </a>
 
@@ -104,7 +115,6 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50">
                 <Globe className="w-4 h-4" />
-                {/* <span className="hidden sm:inline">{currentLang?.flag}</span> */}
                 <span className="hidden md:inline">{currentLang?.name}</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -121,7 +131,6 @@ const Navbar = () => {
                         : "text-foreground hover:bg-muted"
                     }`}
                   >
-                    {/* <span>{lang.flag}</span> */}
                     <span>{lang.name}</span>
                   </DropdownMenuItem>
                 ))}
@@ -159,7 +168,7 @@ const Navbar = () => {
                 {t(item.key)}
               </a>
             ))}
-            
+
             {/* Mobile Phone Number */}
             <a
               href="tel:+998337758800"

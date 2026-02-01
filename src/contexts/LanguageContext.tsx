@@ -75,6 +75,8 @@ const translations: Record<Language, Record<string, string>> = {
     "product.noise": "Shovqin darajasi 18 dB dan",
     "product.filters": "6 bosqichli filtratsiya",
     "product.hepa": "HEPA H13",
+    "product.ins": "Yo‘riqnoma",
+
     
     // Promo
     "promo.buy": "Havo tozalagich sotib oling",
@@ -253,6 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     "product.noise": "Уровень шума от 18 dB",
     "product.filters": "6 степеней фильтрации",
     "product.hepa": "HEPA H13",
+    "product.ins": "Инструкция",
     
     // Promo
     "promo.buy": "Купите очиститель воздуха",
@@ -431,7 +434,7 @@ const translations: Record<Language, Record<string, string>> = {
     "product.noise": "Noise level from 18 dB",
     "product.filters": "6 filtration stages",
     "product.hepa": "HEPA H13",
-    
+    "product.ins": "User Manual",
     // Promo
     "promo.buy": "Buy an air purifier",
     "promo.win": "Win a trip to Dubai",
