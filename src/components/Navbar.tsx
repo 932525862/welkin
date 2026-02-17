@@ -103,12 +103,12 @@ const Navbar = () => {
           {/* Language Selector & Mobile Menu Button */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             {/* Phone Number */}
-            <a
-              href="tel:+998337758800"
+              <a
+                href="tel:+998337758800"
               className="hidden sm:flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 text-sm font-medium text-primary hover:text-primary/90 hover:bg-primary/10 rounded-lg transition-all duration-200"
             >
               <span className="hidden md:inline">Tel:</span>
-              <span className="font-bold"> +998 33 775 88 00</span>
+              <span className="font-bold"> +998 94 940 06 66</span>
             </a>
 
             {/* Language Dropdown */}
@@ -171,10 +171,10 @@ const Navbar = () => {
 
             {/* Mobile Phone Number */}
             <a
-              href="tel:+998337758800"
+              href="tel:+998949400666"
               className="block px-4 py-3 text-base font-bold text-primary hover:text-primary/90 hover:bg-primary/10 rounded-lg transition-all duration-200"
             >
-              Tel: +998 33 775 88 00
+              Tel: +998 94 940 06 66
             </a>
           </div>
         </div>

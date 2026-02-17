@@ -147,14 +147,14 @@ const ContactFormSection = () => {
               </button>
 
               <a
-                href="tel:+998337758800"
+                href="tel:+998949400666"
                 className="flex items-center justify-between p-4 rounded-lg bg-slate-700/50 border border-slate-600/50 hover:border-primary/50 hover:bg-slate-700/70 transition-all"
               >
                 <span className="text-foreground font-medium">
                   {t("contact.label")}:
                 </span>
                 <span className="text-primary font-bold text-lg">
-                  +998 33 775 88 00
+                  +998 94 940 06 66
                 </span>
               </a>
               {/* <a
